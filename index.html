@@ -1,1 +1,197 @@
-OFFICAL WEB VIEW SHS SUITE
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505;
+  --panel:#0c0c0c;
+  --line:rgba(255,255,255,0.08);
+  --text:#f5f5f5;
+  --muted:rgba(255,255,255,0.6);
+  --accent:#e7ff3c;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Space Grotesk",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+.grid-bg{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg,var(--line) 1px, transparent 1px);
+  background-size:40px 40px;
+  mask-image:radial-gradient(circle at center, black 40%, transparent 100%);
+  z-index:0;
+}
+.wrapper{
+  position:relative;
+  z-index:1;
+  max-width:1200px;
+  margin:auto;
+  padding:60px 24px;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:80px;
+}
+.logo{
+  font-weight:700;
+  font-size:20px;
+  letter-spacing:2px;
+}
+.nav-link{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.hero h1{
+  font-size:64px;
+  line-height:1;
+  margin:0 0 24px;
+  text-transform:uppercase;
+}
+.hero p{
+  color:var(--muted);
+  font-size:16px;
+  max-width:480px;
+  margin-bottom:32px;
+}
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  background:var(--accent);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:2px;
+}
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:30px;
+  position:relative;
+}
+.panel::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border:1px solid var(--accent);
+  opacity:0.2;
+  pointer-events:none;
+}
+.stat{
+  margin-bottom:24px;
+}
+.stat h3{
+  margin:0;
+  font-size:28px;
+}
+.stat span{
+  font-size:13px;
+  color:var(--muted);
+}
+.features{
+  margin-top:120px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+.feature{
+  border-top:1px solid var(--line);
+  padding-top:20px;
+}
+.feature h4{
+  margin:0 0 10px;
+  font-size:18px;
+}
+.feature p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+footer{
+  margin-top:120px;
+  border-top:1px solid var(--line);
+  padding-top:20px;
+  font-size:13px;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+  .features{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="wrapper">
+  <nav>
+    <div class="logo">SHS SUITE</div>
+    <a href="https://t.me/trasersecteam" target="_blank" class="nav-link">COMMUNITY</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Build Different</h1>
+      <p>SHS Suite adalah koleksi tools, workflow, dan resource yang dirancang untuk developer yang ingin sesuatu yang lebih tajam, lebih bersih, dan tidak pasaran.</p>
+      <a href="https://t.me/trasersecteam" target="_blank" class="btn">JOIN COMMUNITY</a>
+    </div>
+
+    <div class="panel">
+      <div class="stat">
+        <h3>01</h3>
+        <span>Minimal System</span>
+      </div>
+      <div class="stat">
+        <h3>02</h3>
+        <span>Fast Integration</span>
+      </div>
+      <div class="stat">
+        <h3>03</h3>
+        <span>Open Collaboration</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h4>STRUCTURE</h4>
+      <p>Arsitektur rapi dan modular untuk pengembangan cepat.</p>
+    </div>
+    <div class="feature">
+      <h4>PERFORMANCE</h4>
+      <p>Ringan, efisien, dan fokus pada fungsionalitas inti.</p>
+    </div>
+    <div class="feature">
+      <h4>COMMUNITY</h4>
+      <p>Diskusi, update, dan kolaborasi melalui Telegram resmi.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>SHS Suite Official</div>
+    <div>2026</div>
+  </footer>
+</div>
+</body>
+</html>
